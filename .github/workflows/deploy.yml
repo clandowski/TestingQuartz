@@ -37,6 +37,10 @@ jobs:
       # Debug: copying the lock file directly?
       - name: Get the lock file
         shell: bash
+        run: ls /home/runner/setup-pnpm/node_modules/.bin/
+      # Debug: copying the lock file directly?
+      - name: Get the lock file
+        shell: bash
         run: cp /home/runner/setup-pnpm/node_modules/.bin/pnpm-lock.yaml /home/runner/work/TestingQuartz/TestingQuartz
       - uses: actions/setup-node@v4
         with:
