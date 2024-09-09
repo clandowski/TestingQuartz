@@ -30,18 +30,18 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: latest
-      # Debug: see if this hangs indefinitely
+      # Debug: Get the path for where it saved the file, I think? its just not going to the folder that is expected next but I dunno
       - name: Get pnpm store directory
         shell: bash
         run: pnpm store path 
-      # Debug: copying the lock file directly?
-      - name: Get the lock file
-        shell: bash
-        run: 'ls /home/runner/setup-pnpm/node_modules/.bin/'
-      # Debug: copying the lock file directly?
-      - name: Get the lock file
-        shell: bash
-        run: cp /home/runner/setup-pnpm/node_modules/.bin/pnpm-lock.yaml /home/runner/work/TestingQuartz/TestingQuartz
+      # Debug: List contents to see if the file is there?  I am clearly doing something wrong
+      #- name: Get the lock file
+      #  shell: bash
+      #  run: ls /home/runner/setup-pnpm/node_modules/.bin/
+      # Debug: copying the lock file directly?  This doesn't work, I don't know what to do to accomplish this
+      #- name: Get the lock file
+      #  shell: bash
+      #  run: cp /home/runner/setup-pnpm/node_modules/.bin/pnpm-lock.yaml /home/runner/work/TestingQuartz/TestingQuartz
       - uses: actions/setup-node@v4
         with:
           node-version: 22
