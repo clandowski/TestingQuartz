@@ -37,7 +37,7 @@ jobs:
       # Debug: copying the lock file directly?
       - name: Get the lock file
         shell: bash
-        run: ls /home/runner/setup-pnpm/node_modules/.bin/
+        run: 'ls /home/runner/setup-pnpm/node_modules/.bin/'
       # Debug: copying the lock file directly?
       - name: Get the lock file
         shell: bash
