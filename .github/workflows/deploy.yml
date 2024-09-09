@@ -34,6 +34,10 @@ jobs:
       - name: Get pnpm store directory
         shell: bash
         run: pnpm store path 
+      # Debug: copying the lock file directly?
+      - name: Get the lock file
+        shell: bash
+        run: cp /home/runner/setup-pnpm/node_modules/.bin/pnpm-lock.yaml /home/runner/work/TestingQuartz/TestingQuartz
       - uses: actions/setup-node@v4
         with:
           node-version: 22
